@@ -1,5 +1,11 @@
-const rename = function() {
-  return true;
+const createSeries = function(start, end) {
+  const series = [];
+
+  for(let counter = start; counter <= end; counter++) {
+    series.push(counter);
+  }
+
+  return series;
 }
 
-exports.rename = rename;
+exports.createSeries = createSeries;
