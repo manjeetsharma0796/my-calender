@@ -23,5 +23,15 @@ describe('array-utils', function () {
 
       deepStrictEqual(actual, expected);
     });
+
+    it('should give chunks of 2 even when no overlap size is given', function () {
+      const numbers = [1, 2, 3, 4, 5];
+      const chunkSize = 2;
+
+      const actual = chunk(numbers, chunkSize);
+      const expected = [[1, 2], [3,4], [5]];
+
+      deepStrictEqual(actual, expected);
+    });
   });
 });
